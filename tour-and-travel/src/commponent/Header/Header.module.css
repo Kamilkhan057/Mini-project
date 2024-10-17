@@ -1,0 +1,111 @@
+.header_wrapper {
+    margin-top: 160px;
+    padding: 0;
+}
+
+.imageContainer {
+    height: 480px;
+    width: 100%;
+    background: url(./../../assets/d1.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px;
+    border-radius: 18px;
+    z-index: 1;
+    position: relative;
+    animation: anim_change_img 10s infinite linear alternate;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+
+}
+
+.imageContainer::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0,.4);
+    z-index: -1;
+    border-radius: 18px;
+}
+
+@keyframes anim_change_img {
+    0% {
+        background: url(./../../assets/Destination01.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    25% {
+        background: url(./../../assets/Destination03.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    }
+    55% {
+        background: url(./../../assets/Destination03.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    }
+    75% {
+        background: url(./../../assets/Destination04.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+    }
+    90% {
+        background: url(./../../assets/Destination05.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    }
+    100% {
+        background: url(./../../assets/Destination06.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    }
+
+}
+.imageContainer h2{
+    font-size: 48px;
+    line-height: 60px;
+    color: #fff;
+    /* margin-top: 220px; */
+   
+}
+.Swiper{
+   width: 80% !important;
+   margin-top: -80px;
+}
+.DestinationsCard{
+    padding: 20px;
+    background-color:#fff;
+    border-radius: 12px;
+}
+.DestinationsCard img{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width:580px){
+    .imageContainer {
+        height: 300px;
+        padding: 20px;
+      }
+    .imageContainer h2{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+}
